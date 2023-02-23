@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <div id="picker"></div>
+        <div class="color-inputs">
+            <div class="rgb-input color-input">
+                <div class="color-component component-R">
+                    <label for="R">R</label>
+                    <input placeholder = 0 type="text" name="R">
+                </div>
+
+                <div class="color-component component-G">
+                    <label for="G">G</label>
+                    <input placeholder = 0 type="text" name="G">
+                </div>
+
+                <div class="color-component component-B">
+                    <label for="B">B</label>
+                    <input placeholder = 0 type="text" name="B">
+                </div>
+            </div>
+            <div class="xyz-input color-input">
+                <div class="color-component component-X">
+                    <label for="X">X</label>
+                    <input placeholder = 0 type="text" name="X">
+                </div>
+
+                <div class="color-component component-Y">
+                    <label for="Y">Y</label>
+                    <input placeholder = 0 type="text" name="Y">
+                </div>
+
+                <div class="color-component component-Z">
+                    <label for="Z">Z</label>
+                    <input placeholder = 0 type="text" name="Z">
+                </div>
+            </div>
+            <div class="hsl-input color-input">
+                <div class="color-component component-H">
+                    <label for="H">H</label>
+                    <input placeholder = 0 type="text" name="H">
+                </div>
+
+                <div class="color-component component-S">
+                    <label for="S">S</label>
+                    <input placeholder = 0 type="text" name="S">
+                </div>
+
+                <div class="color-component component-L">
+                    <label for="L">L</label>
+                    <input placeholder = 0 type="text" name="L">
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="notification">
+        <p>Выход за пределы диапазона</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
