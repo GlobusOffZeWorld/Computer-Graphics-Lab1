@@ -118,6 +118,8 @@ colorPicker.on("color:change", function (color) {
     document.body.style.background = color.rgbString
 })
 
+
+
 function showNotification() {
     notification.style.opacity = 1
     setTimeout(() => {
