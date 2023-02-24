@@ -56,7 +56,7 @@ const colorPicker = new iro.ColorPicker("#picker", {
 const XYZInput = document.querySelectorAll(".xyz-input input")
 
 XYZInput.forEach((input) =>
-    input.addEventListener("change", (e) => {
+    input.addEventListener("change", () => {
         const rgb = XYZtoRGB([
             componentX.lastElementChild.value,
             componentY.lastElementChild.value,
@@ -77,7 +77,7 @@ XYZInput.forEach((input) =>
 const HSLInput = document.querySelectorAll(".hsl-input input")
 
 HSLInput.forEach((input) =>
-    input.addEventListener("change", (e) => {
+    input.addEventListener("change", () => {
         colorPicker.color.hsl = {
             h: componentH.lastElementChild.value,
             s: componentS.lastElementChild.value,
@@ -89,7 +89,7 @@ HSLInput.forEach((input) =>
 const RGBInput = document.querySelectorAll(".rgb-input input")
 
 RGBInput.forEach((input) =>
-    input.addEventListener("change", (e) => {
+    input.addEventListener("change", () => {
         colorPicker.color.rgb = {
             r: componentR.lastElementChild.value,
             g: componentG.lastElementChild.value,
@@ -117,8 +117,6 @@ colorPicker.on("color:change", function (color) {
 
     document.body.style.background = color.rgbString
 })
-
-
 
 function showNotification() {
     notification.style.opacity = 1
