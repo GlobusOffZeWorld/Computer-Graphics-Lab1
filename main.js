@@ -57,6 +57,17 @@ const XYZInput = document.querySelectorAll(".xyz-input input")
 
 XYZInput.forEach((input) =>
     input.addEventListener("change", () => {
+        if (componentX.lastElementChild.value < 0) {
+            componentX.lastElementChild.value = 0
+        } 
+
+        if (componentY.lastElementChild.value < 0) {
+            componentY.lastElementChild.value = 0
+        } 
+        if (componentZ.lastElementChild.value < 0) {
+            componentZ.lastElementChild.value = 0
+        } 
+
         const rgb = XYZtoRGB([
             componentX.lastElementChild.value,
             componentY.lastElementChild.value,
@@ -78,6 +89,23 @@ const HSLInput = document.querySelectorAll(".hsl-input input")
 
 HSLInput.forEach((input) =>
     input.addEventListener("change", () => {
+        if (componentH.lastElementChild.value > 360) {
+            componentH.lastElementChild.value = 360
+        } else if (componentH.lastElementChild.value < 0) {
+            componentH.lastElementChild.value = 0
+        }
+
+        if (componentS.lastElementChild.value > 100) {
+            componentS.lastElementChild.value = 100
+        } else if (componentS.lastElementChild.value < 0) {
+            componentS.lastElementChild.value = 0
+        }
+
+        if (componentL.lastElementChild.value > 100) {
+            componentL.lastElementChild.value = 100
+        } else if (componentL.lastElementChild.value < 0) {
+            componentL.lastElementChild.value = 0
+        }
         colorPicker.color.hsl = {
             h: componentH.lastElementChild.value,
             s: componentS.lastElementChild.value,
@@ -89,7 +117,14 @@ HSLInput.forEach((input) =>
 const RGBInput = document.querySelectorAll(".rgb-input input")
 
 RGBInput.forEach((input) =>
-    input.addEventListener("change", () => {
+    input.addEventListener("change", (e) => {
+        if (e.target.value > 255) {
+            e.target.value = 255
+        } else if (e.target.value) {
+            e.target.value = 0
+        }
+        
+
         colorPicker.color.rgb = {
             r: componentR.lastElementChild.value,
             g: componentG.lastElementChild.value,
