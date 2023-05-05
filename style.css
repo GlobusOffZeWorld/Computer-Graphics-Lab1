@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: inline-block;
+}
+
+
+body {
+    background: #3b4b57;
+    min-height: 800px;
+    min-width: 800px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+
+    width: 640px;
+    height: 640px;
+    background: #587284;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.color-inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.color-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-component {
+    margin: 3px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type='number'] {
+    padding: 3px;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+
+}
+
+.notification {
+    width: 400px;
+    height: 100px;
+    background-color: #587284;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.notification>p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
